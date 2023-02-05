@@ -7,7 +7,9 @@ Scriptable widget that shows the currently open swim lanes for recreational swim
 [![License](https://img.shields.io/badge/plugin-scriptable-blue)](https://img.shields.io/badge/plugin-scriptable-blue)
 
 
-![](widget.png?raw=true "Title")
+
+<img src="widget.png?raw=true"  width="300">
+
 
 ## 1. Installation 🛠
 🚨 We only support iOS for now, sorry! 🚨
