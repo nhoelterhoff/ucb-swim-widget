@@ -7,6 +7,7 @@ Scriptable widget that shows the currently open swim lanes for recreational swim
 [![License](https://img.shields.io/badge/plugin-scriptable-blue)](https://img.shields.io/badge/plugin-scriptable-blue)
 
 
+![](widget.png?raw=true "Title")
 
 ## 1. Installation 🛠
 🚨 We only support iOS for now, sorry! 🚨
@@ -24,9 +25,9 @@ Scriptable widget that shows the currently open swim lanes for recreational swim
 
 ## 2. Feedback & Suggestions 💬
 Feel free to let me know any suggestions or feedback.
+:bird: [@nik_hoelti](https://twitter.com/nik_hoelti)
 
 ## 3. Credits
 Big shoutout to the following repositories, for providing helpful code snippets:
 - https://github.com/Martlgap/SmarterTankenWidget
-- 
 
