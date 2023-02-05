@@ -242,20 +242,14 @@ async function createWidget() {
   return list;
 }
 
-async function main() {
-  let widget = await createWidget();
+let widget = await createWidget();
 
-  // Check where the script is running
-  if (config.runsInWidget) {
-    // Runs inside a widget so add it to the homescreen widget
-    Script.setWidget(widget);
-  } else {
-    // Show the medium widget inside the app
-    widget.presentMedium();
-  }
-  Script.complete();
+// Check where the script is running
+if (config.runsInWidget) {
+  // Runs inside a widget so add it to the homescreen widget
+  Script.setWidget(widget);
+} else {
+  // Show the medium widget inside the app
+  widget.presentMedium();
 }
-
-module.exports = {
-  main,
-};
+Script.complete();
