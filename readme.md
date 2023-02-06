@@ -1,5 +1,5 @@
-# UCB's Swim Schedule Scriptable Widget
-Scriptable widget that shows the currently open swim lanes for recreational swim.
+# UCB Swim Schedule Scriptable Widget
+Scriptable widget that shows the currently open swim lanes for recreational swim on your iOS device.
 
 
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/nhoelterhoff/ucb-swim-widget)
