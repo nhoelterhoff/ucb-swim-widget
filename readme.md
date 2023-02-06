@@ -34,7 +34,7 @@ Big shoutout to the following repositories, for providing helpful code snippets:
 - https://github.com/linusmimietz/Scriptable-Auto-Update (Awesome Scriptable Updater functionalities)
 
 
-## Contact
+## 💬 Contact
 Feel free to reach my for feature requests, feedback or just to say hi :)
 
 ![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fnik_hoelti)
