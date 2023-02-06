@@ -12,14 +12,14 @@ Scriptable widget that shows the currently open swim lanes for recreational swim
 
 
 
-## 💡 Screenshot 
+## 📱 The widget in action 
 <img src="imgs/widget.png?raw=true"  width="300">
 
 
 ## 🛠 Installation 
 🚨 We only support iOS for now, sorry! 🚨
 
-### 📱 iOS
+### 🍏 iOS
 1. Download the [Scriptable App](https://apps.apple.com/de/app/scriptable/id1405459188).
 2. Open the **Scriptable App** and create a new script (**"+" Button** in the top-right corner).
 3. **Rename your script** to "UCB Swim Schedule" by tapping on the title bar saying **"Untitled Script"**
