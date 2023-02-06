@@ -18,7 +18,7 @@ Scriptable widget that shows the currently open swim lanes for recreational swim
 - Download the [Scriptable App](https://apps.apple.com/de/app/scriptable/id1405459188).
 - Open the Scriptable App and create a new script (**+Button** in the top-right corner).
 - Rename your script to "Cal Swim Schedule" by tapping on the title bar saying "Untitled Script"
-- Copy and paste the code from [widget.js](https://raw.githubusercontent.com/nhoelterhoff/ucb-swim-widget/main/widget.js) code into the new script.
+- Copy and paste the code from [main.js](https://raw.githubusercontent.com/nhoelterhoff/ucb-swim-widget/main/main.js) code into the new script.
 - Press "done".
 - Go to your homescreen, add a new widget, and select the scriptable widget of size **medium**.
 - Press "Add Widget" and back on your home-screen press on the newly added widget-space.
@@ -30,5 +30,7 @@ Feel free to let me know any suggestions or feedback on twitter [@nik_hoelti](ht
 
 ## 3. Credits
 Big shoutout to the following repositories, for providing helpful code snippets:
-- https://github.com/Martlgap/SmarterTankenWidget
+- https://github.com/Martlgap/SmarterTankenWidget (Used a lot of your Readme)
+- https://github.com/linusmimietz/Scriptable-Auto-Update (Awesome Scriptable Updater functionalities)
+
 
