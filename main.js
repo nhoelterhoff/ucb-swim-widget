@@ -2,7 +2,7 @@
 
 let scriptName = "CalSwimScheduleWidget";
 let scriptUrl =
-  "https://raw.githubusercontent.com/nhoelterhoff/ucb-swim-widget/main/widget.js";
+  "https://raw.githubusercontent.com/nhoelterhoff/ucb-swim-widget/main/src/widget.js";
 
 let modulePath = await downloadModule(scriptName, scriptUrl); // jshint ignore:line
 if (modulePath != null) {
