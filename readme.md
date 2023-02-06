@@ -1,5 +1,5 @@
 # UCB Swim Schedule Scriptable Widget
-Scriptable widget that shows the currently open swim lanes for recreational swim on your iOS device.
+Scriptable widget that shows the currently open swim lanes for recreational swim on your iOS device<sup>1</sup>.
 
 
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/nhoelterhoff/ucb-swim-widget)
@@ -44,3 +44,4 @@ Feel free to reach my for feature requests, feedback or just to say hi :)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-008900?style=flat&labelColor=blue&color=blue&logo=data:image/gif;base64,R0lGODlhHgArAPECAA0MIv/dAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFAgACACwAAAAAHgArAAACmpQvoMuM/5qcAB6KpdUWrp5RhtKNoZNU5QqSEVt+lxjT5z3NuJuiMNv4AXPCiGOHMyFpqwxCVmzynqrolMoKaLWmVmkL7m5UXLCZm2pVzuyA2ENqn3tqgdxMH6/v2zx8z+cGBWcXKHiFZXgoVRiYVmNg+FjnOKnXKOd36Tj4h9mm6cmJaPTJFko4ChPHZ0mZ6apXVbe6U5RkUQAAOw==)](https://www.buymeacoffee.com/nhoelterhoff)
 
 
+<sup>1</sup> This widget is in no way affiliated with UCB or the Cal Triathlon team
