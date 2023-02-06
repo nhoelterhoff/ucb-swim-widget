@@ -1,6 +1,6 @@
 // jshint -W119
 
-let scriptName = "Cal Swim Schedule";
+let scriptName = "CalSwimScheduleWidget";
 let scriptUrl =
   "https://raw.githubusercontent.com/nhoelterhoff/ucb-swim-widget/main/widget.js";
 

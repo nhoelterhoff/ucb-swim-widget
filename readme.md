@@ -8,7 +8,7 @@ Scriptable widget that shows the currently open swim lanes for recreational swim
 
 
 
-<img src="widget.png?raw=true"  width="300">
+<img src="imgs/widget.png?raw=true"  width="300">
 
 
 ## 1. Installation 🛠
