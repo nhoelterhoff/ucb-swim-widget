@@ -29,6 +29,7 @@ Scriptable widget that shows the currently open swim lanes for recreational swim
 
 ## 2. Feedback & Suggestions 💬
 Feel free to let me know any suggestions or feedback on twitter [@nik_hoelti](https://twitter.com/nik_hoelti).
+
 ![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fnik_hoelti)
 
 ## 3. Credits
