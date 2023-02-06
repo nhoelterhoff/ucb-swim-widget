@@ -27,7 +27,7 @@ Scriptable widget that shows the currently open swim lanes for recreational swim
 7. Press **"Add Widget"** and back on your home-screen press on the **newly added widget-space**.
 8. **Select the "UCB Swim Schedule" script** that you created in step 3.
 
-✅ You are all set! Let me know any feedback or comments.
+✅ You are all set!
 
 
 ## 🧑‍💻 Credits 
