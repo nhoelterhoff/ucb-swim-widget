@@ -1,10 +1,12 @@
 # UCB's Swim Schedule Scriptable Widget
 Scriptable widget that shows the currently open swim lanes for recreational swim.
 
+
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/nhoelterhoff/ucb-swim-widget)
+![GitHub](https://img.shields.io/github/license/nhoelterhoff/ucb-swim-widget)
 [![Last Commit](https://img.shields.io/github/last-commit/nhoelterhoff/ucb-swim-widget)](https://img.shields.io/github/last-commit/nhoelterhoff/ucb-swim-widget)
-[![License](https://img.shields.io/badge/license-CC0-blue)](https://img.shields.io/badge/license-CC0-blue)
-[![Version](https://img.shields.io/badge/version-1.0-purple)](https://img.shields.io/badge/version-1.0-purple)
-[![License](https://img.shields.io/badge/plugin-scriptable-blue)](https://img.shields.io/badge/plugin-scriptable-blue)
+
+
 
 
 
@@ -27,6 +29,7 @@ Scriptable widget that shows the currently open swim lanes for recreational swim
 
 ## 2. Feedback & Suggestions 💬
 Feel free to let me know any suggestions or feedback on twitter [@nik_hoelti](https://twitter.com/nik_hoelti).
+![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fnik_hoelti)
 
 ## 3. Credits
 Big shoutout to the following repositories, for providing helpful code snippets:
