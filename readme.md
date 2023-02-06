@@ -12,26 +12,27 @@ Scriptable widget that shows the currently open swim lanes for recreational swim
 
 
 
-
+## 💡 Screenshot 
 <img src="imgs/widget.png?raw=true"  width="300">
 
 
-## 1. Installation 🛠
+## 🛠 Installation 
 🚨 We only support iOS for now, sorry! 🚨
 
-### iOS
-- Download the [Scriptable App](https://apps.apple.com/de/app/scriptable/id1405459188).
-- Open the Scriptable App and create a new script (**+Button** in the top-right corner).
-- Rename your script to "Cal Swim Schedule" by tapping on the title bar saying "Untitled Script"
-- Copy and paste the code from [main.js](https://raw.githubusercontent.com/nhoelterhoff/ucb-swim-widget/main/main.js) code into the new script.
-- Press "done".
-- Go to your homescreen, add a new widget, and select the scriptable widget of size **medium**.
-- Press "Add Widget" and back on your home-screen press on the newly added widget-space.
-- Select the "Cal Swim Schedule" script
-✅ You are all set!
+### 📱 iOS
+1. Download the [Scriptable App](https://apps.apple.com/de/app/scriptable/id1405459188).
+2. Open the **Scriptable App** and create a new script (**"+" Button** in the top-right corner).
+3. **Rename your script** to "UCB Swim Schedule" by tapping on the title bar saying **"Untitled Script"**
+4. **Copy** and **paste the code** from **[main.js](https://raw.githubusercontent.com/nhoelterhoff/ucb-swim-widget/main/main.js)** code into the new script.
+5. Press "done".
+6. Go to your **homescreen**, **add a new widget**, and select the scriptable widget of size **medium**.
+7. Press **"Add Widget"** and back on your home-screen press on the **newly added widget-space**.
+8. **Select the "UCB Swim Schedule" script** that you created in step 3.
+
+✅ You are all set! Let me know any feedback or comments.
 
 
-## 2. Credits
+## 🧑‍💻 Credits 
 Big shoutout to the following repositories, for providing helpful code snippets:
 - https://github.com/Martlgap/SmarterTankenWidget (Used a lot of your Readme)
 - https://github.com/linusmimietz/Scriptable-Auto-Update (Awesome Scriptable Updater functionalities)
