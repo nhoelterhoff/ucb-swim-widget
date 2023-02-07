@@ -17,6 +17,7 @@ const dateTimeOptions = {
     hour: "numeric",
     minute: "numeric",
   },
+  timezoneOptions = { timeZone: "America/Los_Angeles" },
   formatter = new Intl.DateTimeFormat([], dateTimeOptions),
   rowSize = 220;
 //   textRowSize = new Size(rowSize, 0);
@@ -119,23 +120,37 @@ function displaySessions(stack, data) {
 
     textStackLeft.addSpacer(3);
 
-    console.log("current date: " + currentDate.toLocaleDateString("en-US"));
-    console.log("start date: " + startTime.toLocaleDateString("en-US"));
+    console.log(
+      "current date: " + currentDate.toLocaleDateString("en-US"),
+      timezoneOptions
+    );
+    console.log(
+      "start date: " + startTime.toLocaleDateString("en-US"),
+      timezoneOptions
+    );
 
     // create variable that contains tomorrows date
     let tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
 
-    console.log("tomorrow: " + startTime.toLocaleDateString("en-US"));
+    console.log(
+      "tomorrow: " + startTime.toLocaleDateString("en-US"),
+      timezoneOptions
+    );
 
     let weekday = "";
 
     if (
-      currentDate.toLocaleDateString("en-us") !=
-      startTime.toLocaleDateString("en-us")
+      currentDate.toLocaleDateString("en-us", {
+        timeZone: "America/Los_Angeles",
+      }) !=
+      startTime.toLocaleDateString("en-us", { timeZone: "America/Los_Angeles" })
     ) {
       weekday =
-        startTime.toLocaleDateString(undefined, { weekday: "short" }) + ", ";
+        startTime.toLocaleDateString(undefined, {
+          weekday: "short",
+          timeZone: "America/Los_Angeles",
+        }) + ", ";
     }
 
     var lineDetails = textStackLeft.addText(
@@ -208,7 +223,10 @@ async function createWidget() {
   let currentDate = new Date();
   let row11 = column1.addStack();
   let weekday = row11.addText(
-    currentDate.toLocaleDateString("en-us", { weekday: "short" })
+    currentDate.toLocaleDateString("en-us", {
+      weekday: "short",
+      timeZone: "America/Los_Angeles",
+    })
   );
   weekday.font = Font.boldSystemFont(20);
   weekday.textColor = new Color("#FDB515");
