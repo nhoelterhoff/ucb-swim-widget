@@ -17,7 +17,6 @@ const dateTimeOptions = {
     hour: "numeric",
     minute: "numeric",
   },
-  timezoneOptions = { timeZone: "America/Los_Angeles" },
   formatter = new Intl.DateTimeFormat([], dateTimeOptions),
   rowSize = 220;
 //   textRowSize = new Size(rowSize, 0);
@@ -100,11 +99,13 @@ function displaySessions(stack, data) {
 
     let event = data[ix]["event"],
       poolName = data[ix]["pool_name"],
-      currentDate = new Date(),
-      startTime = new Date(data[ix]["start_time"]),
-      startTimeStr = startTime.toLocaleString("en-us", dateTimeOptions),
-      endTime = new Date(data[ix]["end_time"]),
-      endTimeStr = endTime.toLocaleString("en-us", dateTimeOptions);
+      currentDate = new Date().toLocaleString("en-US", {
+        timeZone: "America/Los",
+      });
+    (startTime = new Date(data[ix]["start_time"])),
+      (startTimeStr = startTime.toLocaleString("en-us", dateTimeOptions)),
+      (endTime = new Date(data[ix]["end_time"])),
+      (endTimeStr = endTime.toLocaleString("en-us", dateTimeOptions));
 
     if (ix > 0) {
       horizontalRule(stack);
@@ -120,23 +121,14 @@ function displaySessions(stack, data) {
 
     textStackLeft.addSpacer(3);
 
-    console.log(
-      "current date: " + currentDate.toLocaleDateString("en-US"),
-      timezoneOptions
-    );
-    console.log(
-      "start date: " + startTime.toLocaleDateString("en-US"),
-      timezoneOptions
-    );
+    console.log("current date: " + currentDate);
+    console.log("start date: " + startTime.toLocaleDateString("en-US"));
 
     // create variable that contains tomorrows date
     let tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
 
-    console.log(
-      "tomorrow: " + startTime.toLocaleDateString("en-US"),
-      timezoneOptions
-    );
+    console.log("tomorrow: " + startTime.toLocaleDateString("en-US"));
 
     let weekday = "";
 
