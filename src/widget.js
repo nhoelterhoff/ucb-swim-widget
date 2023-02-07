@@ -12,11 +12,12 @@ if (!fm.fileExists(cachePath)) {
   fm.createDirectory(cachePath);
 }
 
-const dateTimeOptions = {
-    hour: "numeric",
-    minute: "numeric",
+let timezoneConfig = { timeZone: "America/Los_Angeles" },
+  timeConfig = {
+    timeZone: "America/Los_Angeles",
+    hour: "2-digit",
+    minute: "2-digit",
   },
-  formatter = new Intl.DateTimeFormat([], dateTimeOptions),
   rowSize = 220;
 //   textRowSize = new Size(rowSize, 0);
 
@@ -98,13 +99,15 @@ function displaySessions(stack, data) {
 
     let event = data[ix]["event"],
       poolName = data[ix]["pool_name"],
-      currentDate = new Date().toLocaleString("en-US", {
-        timeZone: "America/Los_Angeles",
-      });
-    (startTime = new Date(data[ix]["start_time"])),
-      (startTimeStr = startTime.toLocaleString("en-us", dateTimeOptions)),
-      (endTime = new Date(data[ix]["end_time"])),
-      (endTimeStr = endTime.toLocaleString("en-us", dateTimeOptions));
+      currentTimeStr = new Date().toLocaleString("en-US", timezoneConfig),
+      // tomorrowDate = new Date(Date.parse(currentTimeStr) + 86400000),
+      startTime = new Date(Date.parse(data[ix]["start_time"])),
+      endTime = new Date(Date.parse(data[ix]["end_time"])),
+      currentDateStr = new Date().toLocaleDateString("en-US", timezoneConfig),
+      startDateStr = startTime.toLocaleDateString("en-US", timezoneConfig),
+      startTimeStr = startTime.toLocaleString("en-US", timeConfig),
+      endTimeStr = endTime.toLocaleString("en-US", timeConfig);
+    // endDateStr = endTime.toLocaleDateString("en-US", timezoneConfig);
 
     if (ix > 0) {
       horizontalRule(stack);
@@ -120,22 +123,9 @@ function displaySessions(stack, data) {
 
     textStackLeft.addSpacer(3);
 
-    console.log("current date: " + currentDate);
-    console.log("start date: " + startTime.toLocaleDateString("en-US"));
-
-    // create variable that contains tomorrows date
-    let tomorrow = new Date();
-    tomorrow.setDate(tomorrow.getDate() + 1);
-
-    console.log("tomorrow: " + startTime.toLocaleDateString("en-US"));
-
     let weekday = "";
 
-    if (
-      currentDate.toLocaleDateString("en-us", {
-        timeZone: "America/Los_Angeles",
-      }) != startTime.toLocaleDateString("en-us")
-    ) {
+    if (currentDateStr != startDateStr) {
       weekday =
         startTime.toLocaleDateString(undefined, {
           weekday: "short",
