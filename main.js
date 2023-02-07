@@ -2,7 +2,7 @@
 
 let scriptName = "UCBSwimScheduleWidget";
 let scriptUrl =
-  "https://raw.githubusercontent.com/nhoelterhoff/ucb-swim-widget/main/src/widget.js";
+  "x";
 
 let modulePath = await downloadModule(scriptName, scriptUrl); // jshint ignore:line
 if (modulePath != null) {
