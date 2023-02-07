@@ -15,8 +15,8 @@ if (!fm.fileExists(cachePath)) {
 let timezoneConfig = { timeZone: "America/Los_Angeles" },
   timeConfig = {
     timeZone: "America/Los_Angeles",
-    hour: "2-digit",
-    minute: "2-digit",
+    hour: "short",
+    minute: "short",
   },
   rowSize = 220;
 //   textRowSize = new Size(rowSize, 0);
