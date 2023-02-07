@@ -24,7 +24,7 @@ let timezoneConfig = { timeZone: "America/Los_Angeles" },
 async function fetchSwimData() {
   const cache_key = "swimData";
   const url =
-    "https://get-swim-schedule-6hoa6yfhea-uw.a.run.app?device=" + Device.name();
+    "https://get-swim-schedule-6hoa6yfhea-uw.a.run.app";
 
   try {
     let req = new Request(url);
