@@ -13,7 +13,6 @@ if (!fm.fileExists(cachePath)) {
 }
 
 const dateTimeOptions = {
-    timeZone: "America/Los_Angeles",
     hour: "numeric",
     minute: "numeric",
   },
@@ -135,13 +134,11 @@ function displaySessions(stack, data) {
     if (
       currentDate.toLocaleDateString("en-us", {
         timeZone: "America/Los_Angeles",
-      }) !=
-      startTime.toLocaleDateString("en-us", { timeZone: "America/Los_Angeles" })
+      }) != startTime.toLocaleDateString("en-us")
     ) {
       weekday =
         startTime.toLocaleDateString(undefined, {
           weekday: "short",
-          timeZone: "America/Los_Angeles",
         }) + ", ";
     }
 
