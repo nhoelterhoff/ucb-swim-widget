@@ -99,7 +99,7 @@ function displaySessions(stack, data) {
     let event = data[ix]["event"],
       poolName = data[ix]["pool_name"],
       currentDate = new Date().toLocaleString("en-US", {
-        timeZone: "America/Los",
+        timeZone: "America/Los_Angeles",
       });
     (startTime = new Date(data[ix]["start_time"])),
       (startTimeStr = startTime.toLocaleString("en-us", dateTimeOptions)),
