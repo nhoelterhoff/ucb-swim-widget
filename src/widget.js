@@ -23,8 +23,7 @@ let timezoneConfig = { timeZone: "America/Los_Angeles" },
 
 async function fetchSwimData() {
   const cache_key = "swimData";
-  const url =
-    "https://get-swim-schedule-6hoa6yfhea-uw.a.run.app";
+  const url = "https://get-swim-schedule-6hoa6yfhea-uw.a.run.app";
 
   try {
     let req = new Request(url);
@@ -121,6 +120,7 @@ function displaySessions(stack, data) {
     let textTitle = textStackLeft.addText(event);
     textTitle.font = fontArticle;
     textTitle.lineLimit = lineLimit;
+    textTitle.textColor = Color.white();
 
     textStackLeft.addSpacer(3);
 
