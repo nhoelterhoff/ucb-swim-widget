@@ -1,3 +1,6 @@
+// Variables used by Scriptable.
+// These must be at the very top of the file. Do not edit.
+// icon-color: deep-brown; icon-glyph: magic;
 // jshint -W119
 
 let scriptName = "UCBSwimScheduleWidget";
@@ -5,6 +8,7 @@ let scriptUrl =
   "https://raw.githubusercontent.com/nhoelterhoff/ucb-swim-widget/main/src/widget.js";
 
 let modulePath = await downloadModule(scriptName, scriptUrl); // jshint ignore:line
+
 if (modulePath != null) {
   let importedModule = importModule(modulePath);
   await importedModule.main(); // jshint ignore:line
@@ -19,18 +23,22 @@ async function downloadModule(scriptName, scriptUrl) {
   let fm = FileManager.local();
   let scriptPath = module.filename;
   let moduleDir = scriptPath.replace(fm.fileName(scriptPath, true), scriptName);
+
   if (fm.fileExists(moduleDir) && !fm.isDirectory(moduleDir))
     fm.remove(moduleDir);
   if (!fm.fileExists(moduleDir)) fm.createDirectory(moduleDir);
   let dayNumber = Math.floor(Date.now() / 1000 / 60 / 60 / 24);
   let moduleFilename = dayNumber.toString() + ".js";
   let modulePath = fm.joinPath(moduleDir, moduleFilename);
+
   if (fm.fileExists(modulePath)) {
-    console.log("Module already downlaoded " + moduleFilename);
+    // check if file is donwloded from iCloud
+    if (!fm.isFileDownloaded(modulePath)) {
+      result = await fm.downloadFileFromiCloud(modulePath);
+    }
     return modulePath;
   } else {
     let [moduleFiles, moduleLatestFile] = getModuleVersions(scriptName);
-    console.log("Downloading " + moduleFilename + " from URL: " + scriptUrl);
     let req = new Request(scriptUrl);
     let moduleJs = await req.load().catch(() => {
       return null;
