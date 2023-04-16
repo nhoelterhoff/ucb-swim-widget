@@ -1,7 +1,7 @@
 // Variables used by Scriptable.
 // These must be at the very top of the file. Do not edit.
 // icon-color: yellow; icon-glyph: magic;
-const scriptVersion = 1;
+const scriptVersion = 2;
 const sourceRepo = "nhoelterhoff/ucb-swim-widget";
 const scriptName = "ucb_swim_widget";
 
@@ -24,9 +24,15 @@ let timezoneConfig = { timeZone: "America/Los_Angeles" },
 async function fetchSwimData() {
   const cache_key = "swimData";
   const url = "https://get-swim-schedule-6hoa6yfhea-uw.a.run.app";
+  let uuid = UUID.string();
 
   try {
     let req = new Request(url);
+    req.method = "POST";
+    req.headers = {
+      "Content-Type": "application/json",
+    };
+    req.body = JSON.stringify({ uuid: uuid });
     let result = await req.loadJSON();
     writeToCache((key = cache_key), (data = result));
     return result;
@@ -101,12 +107,13 @@ function displaySessions(stack, data) {
       poolName = data[ix]["pool_name"],
       currentTimeStr = new Date().toLocaleString("en-US", timezoneConfig),
       // tomorrowDate = new Date(Date.parse(currentTimeStr) + 86400000),
-      startTime = new Date(Date.parse(data[ix]["start_time"])),
-      endTime = new Date(Date.parse(data[ix]["end_time"])),
+      eventDate = new Date(Date.parse(data[ix]["date"])),
+      eventTime = data[ix]["time"],
+      // endTime = new Date(Date.parse(data[ix]["end_time"])),
       currentDateStr = new Date().toLocaleDateString("en-US", timezoneConfig),
-      startDateStr = startTime.toLocaleDateString("en-US", timezoneConfig),
-      startTimeStr = startTime.toLocaleString("en-US", timeConfig),
-      endTimeStr = endTime.toLocaleString("en-US", timeConfig);
+      eventDateStr = eventDate.toLocaleDateString("en-US", timezoneConfig);
+    // startTimeStr = eventDate.toLocaleString("en-US", timeConfig),
+    // endTimeStr = endTime.toLocaleString("en-US", timeConfig);
     // endDateStr = endTime.toLocaleDateString("en-US", timezoneConfig);
 
     if (ix > 0) {
@@ -126,15 +133,15 @@ function displaySessions(stack, data) {
 
     let weekday = "";
 
-    if (currentDateStr != startDateStr) {
+    if (currentDateStr != eventDateStr) {
       weekday =
-        startTime.toLocaleDateString(undefined, {
+        eventDate.toLocaleDateString(undefined, {
           weekday: "short",
         }) + ", ";
     }
 
     var lineDetails = textStackLeft.addText(
-      weekday + startTimeStr + " - " + endTimeStr + " @ " + poolName
+      weekday + eventTime + " @ " + poolName
     );
 
     lineDetails.font = fontCompany;
